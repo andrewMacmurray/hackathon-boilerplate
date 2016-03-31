@@ -2,7 +2,7 @@
 This is some boilerplate code to get us off to a good start at hackathons.
 
 It's based around the core technologies of FAC7s beloved RHINO stack:
-+ React ![react](https://www.codementor.io/assets/topic/category/2x/reactjs.png)
++ React ![react](http://yycjs.com/real-world-react/img/react-logo.png)
 + Redis ![redis](https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png)
 + Hapi ![hapi](https://camo.githubusercontent.com/16f4a37b7e2086b6e44dcb0cdfaf9e41f5738278/68747470733a2f2f7261772e6769746875622e636f6d2f686170696a732f686170692f6d61737465722f696d616765732f686170692e706e67)
 + Node ![node](http://www.fluentd.org/assets/img/datasources/nodejs.png)
