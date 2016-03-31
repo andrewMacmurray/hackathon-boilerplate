@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'bootstrap-navbar';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: $main-font;
+  margin-bottom: $footer-height;
+}

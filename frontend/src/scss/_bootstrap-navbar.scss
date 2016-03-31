@@ -1,0 +1,78 @@
+@import 'variables';
+
+.header-spacing {
+  height: $header-height;
+}
+
+.home {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+
+// top navigation / header
+
+.top-menu {
+  background-color: $header-color;
+  border: none;
+  border-radius: 0;
+
+  .navbar-header {
+    display: inline-block;
+  }
+
+  .navbar-right {
+    display: inline-block;
+    float: right;
+  }
+
+  .navbar-right li {
+    display: inline-block;
+    padding: 20px 0;
+  }
+
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+  .navbar-brand {
+    height: $header-height;
+
+    img {
+      width: $logo-size;
+    }
+  }
+}
+
+// footer
+
+.footer {
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: $footer-color;
+
+  .navbar-header,
+  .navbar-right li {
+    display: inline-block;
+    color: #fff;
+  }
+
+  .navbar-right {
+    display: inline-block;
+    float: right;
+  }
+
+  p {
+    margin: 2em 0;
+    color: #fff;
+  }
+
+  img {
+    width: $logo-size / 1.5;
+  }
+}
