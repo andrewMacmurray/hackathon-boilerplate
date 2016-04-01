@@ -1,7 +1,7 @@
 # hackathon boilerplate
 This is some boilerplate code to get us off to a good start at hackathons.
 
-It's based around the core technologies of Founders and Coders' RHINO stack (React, Redis, Hapi and Node):
+It's based around the core technologies of FAC7's RHINO stack (React, Redis, Hapi and Node):
 
 <img src='http://yycjs.com/real-world-react/img/react-logo.png' width='200' height='180' />
 

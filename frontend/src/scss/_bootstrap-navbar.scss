@@ -12,6 +12,29 @@
   margin-bottom: 0;
 }
 
+// navbar Button
+
+.navbar-toggle {
+  border: none;
+  transition: 0.3s ease;
+  padding: 10px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+}
+
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: rgba(221, 221, 221, 0.26);
+}
 
 // top navigation / header
 
@@ -19,20 +42,6 @@
   background-color: $header-color;
   border: none;
   border-radius: 0;
-
-  .navbar-header {
-    display: inline-block;
-  }
-
-  .navbar-right {
-    display: inline-block;
-    float: right;
-  }
-
-  .navbar-right li {
-    display: inline-block;
-    padding: 20px 0;
-  }
 
   .navbar-nav > li > a {
     color: #fff;
@@ -43,6 +52,12 @@
     img {
       width: $logo-size;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .top-menu .navbar-right li {
+    padding: 20px 0;
   }
 }
 
