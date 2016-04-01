@@ -15,17 +15,24 @@ const styles = {
   }
 }
 
-export default (props) => {
-  return (
-    <Grid style={styles}>
-      <Row>
-        <Col xs={12}>
-          <div style={styles.img.outer}>
-            <img style={styles.img.inner} src='img/rhino.png' />
-          </div>
-          <p>Your app goes here...</p>
-        </Col>
-      </Row>
-    </Grid>
-  )
+export default class About extends React.Component {
+  checkCookie () {
+    return document.cookie.indexOf('reactCookie') > -1
+  }
+
+  render () {
+    return (
+      <Grid style={styles}>
+        <Row>
+          <Col xs={12}>
+            <div style={styles.img.outer}>
+              <img style={styles.img.inner} src='img/rhino.png' />
+            </div>
+            <p onClick={() => { this.authRequest() }}>Your app goes here...</p>
+            {this.checkCookie() ? '' : <a href='/login-with-twitter'>login with twitter</a>}
+          </Col>
+        </Row>
+      </Grid>
+    )
+  }
 }

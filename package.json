@@ -40,10 +40,13 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
+    "bell": "^7.3.0",
     "bluebird": "^3.3.4",
     "env2": "^2.0.7",
     "hapi": "^13.2.2",
+    "hapi-auth-cookie": "^6.1.1",
     "inert": "^3.2.0",
+    "jsonwebtoken": "^5.7.0",
     "react": "^0.14.8",
     "react-bootstrap": "^0.28.4",
     "react-dom": "^0.14.8",
