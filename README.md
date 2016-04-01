@@ -1,11 +1,15 @@
 # hackathon boilerplate
 This is some boilerplate code to get us off to a good start at hackathons.
 
-It's based around the core technologies of FAC7s beloved RHINO stack:
-+ React <img src='http://yycjs.com/real-world-react/img/react-logo.png' width='200' height='180' />
-+ Redis <img src='https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png' width=200 height=80 />
-+ Hapi <img src='https://camo.githubusercontent.com/16f4a37b7e2086b6e44dcb0cdfaf9e41f5738278/68747470733a2f2f7261772e6769746875622e636f6d2f686170696a732f686170692f6d61737465722f696d616765732f686170692e706e67' width='200' height='140' />
-+ Node <img src='http://www.fluentd.org/assets/img/datasources/nodejs.png' width='200' height='100' />
+It's based around the core technologies of Founders and Coders' RHINO stack (React, Redis, Hapi and Node):
+
+<img src='http://yycjs.com/real-world-react/img/react-logo.png' width='200' height='180' />
+
+<img src='https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png' width=220 height=80 />
+
+<img src='https://camo.githubusercontent.com/16f4a37b7e2086b6e44dcb0cdfaf9e41f5738278/68747470733a2f2f7261772e6769746875622e636f6d2f686170696a732f686170692f6d61737465722f696d616765732f686170692e706e67' width='180' height='130' />
+
+<img src='http://www.fluentd.org/assets/img/datasources/nodejs.png' width='200' height='100' />
 
 ### What's in the boilerplate?
 
