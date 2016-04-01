@@ -2,10 +2,10 @@
 This is some boilerplate code to get us off to a good start at hackathons.
 
 It's based around the core technologies of FAC7s beloved RHINO stack:
-+ React ![react](http://yycjs.com/real-world-react/img/react-logo.png)
-+ Redis ![redis](https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png)
-+ Hapi ![hapi](https://camo.githubusercontent.com/16f4a37b7e2086b6e44dcb0cdfaf9e41f5738278/68747470733a2f2f7261772e6769746875622e636f6d2f686170696a732f686170692f6d61737465722f696d616765732f686170692e706e67)
-+ Node ![node](http://www.fluentd.org/assets/img/datasources/nodejs.png)
++ React <img src='http://yycjs.com/real-world-react/img/react-logo.png' width='200' height='180' />
++ Redis <img src='https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png' width=200 height=80 />
++ Hapi <img src='https://camo.githubusercontent.com/16f4a37b7e2086b6e44dcb0cdfaf9e41f5738278/68747470733a2f2f7261772e6769746875622e636f6d2f686170696a732f686170692f6d61737465722f696d616765732f686170692e706e67' width='200' height='140' />
++ Node <img src='http://www.fluentd.org/assets/img/datasources/nodejs.png' width='200' height='100' />
 
 ### What's in the boilerplate?
 
@@ -21,19 +21,19 @@ If you want to get straight up and running skip to the last section!
 
 ### Babel
 
-![babel](https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png)
+<img src='https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png' width='200' height='170' />
 
 All code on the frontend and backend is run through Babel so we can use the full range of ES6 features we've been exposed to with react on the backend too (including import, export and object destructuring)
 
 ### Webpack
 
-![webpack](http://huaichao.wang/logo/AHDcHLsFuiX8.png)
+<img src='http://huaichao.wang/logo/AHDcHLsFuiX8.png' width='180' height='200' />
 
 Frontend code is run through Webpack which transpiles all the js and jsx through babel and bundles it into one neat file `app.js` which meets ES5 standards
 
 ### Sass
 
-![sass](http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png)
+<img src='http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png' width='180' height='130' />
 
 Webpack also watches for `.scss` files and turns them into css that can be used in the bundle
 
@@ -52,7 +52,8 @@ The server is configured to serve js files, images (from the `./public/img` fold
 The Hello route is just an example of a data endpoint (this should be deleted)
 
 ### Bluebird.js
-![bluebird](http://devstickers.com/assets/img/pro/qtia.png)
+
+<img src='http://devstickers.com/assets/img/pro/qtia.png' width='180' height='180' />
 
 Redis is separated into the client and the redisFunctions files: The example redis functions (these should also be deleted) take advantage of the fantastic Bluebird Promise library:
 
@@ -93,7 +94,7 @@ These then get rendered to the DOM in `index.js`
 
 ### React Bootstrap
 
-![react-bootstrap](https://avatars0.githubusercontent.com/u/6853419?v=3&s=400)
+<img src='https://avatars0.githubusercontent.com/u/6853419?v=3&s=400' width='140' height='140' />
 
 The current boilerplate makes use of React Bootstrap which is a brilliant collection of components based on the Bootstrap css framework
 
