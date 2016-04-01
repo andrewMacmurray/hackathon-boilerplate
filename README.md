@@ -134,32 +134,29 @@ There are also some default colors set for the header and footer background colo
 
 # Get Up and running
 
-1. Clone or fork the repo
+1- Clone or fork the repo
 (if you want to repurpose it as your own delete the .git folder and copy the files over to your new repo) and change the `repository` and `bugs` fields in the `package.json`
-```sh
+```
 $ git clone https://github.com/andrewMacmurray/hackathon-boilerplate.git
 ```
-
-2. Install all the dependencies by `cd`-ing into the folder and running:
-```sh
+2- Install all the dependencies by `cd`-ing into the folder and running:
+```
 $ npm install
 ```
-
-3. Start your redis server (in annother terminal window) and then open the redis-cli
-```sh
+3- Start your redis server (in annother terminal window) and then open the redis-cli
+```
 $ redis-server
 ```
-```sh
+```
 $ redis-cli
 ```
-
-4. If you just want to make changes to the frontend code (i.e. you don't need any data from the hapi server or database) run:
-```sh
+4- If you just want to make changes to the frontend code (i.e. you don't need any data from the hapi server or database) run:
+```
 $ npm run dev
 ```
 This fires up the webpack dev server with hot reloading. Go to `localhost:8080` in your browser to see the build
 
-5. If you want to see the whole app running (with api data and all), you need to run two commands:
+5- If you want to see the whole app running (with api data and all), you need to run two commands:
 ```sh
 $ npm run nodemon
 ```
