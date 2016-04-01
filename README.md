@@ -1,5 +1,8 @@
 # hackathon boilerplate
-This is some boilerplate code to get us off to a good start at hackathons.
+
+[Founders and Coders'](http://www.foundersandcoders.com/) current cohort are doing Hackathons all through April. This is some boilerplate code to get us off to a good start.
+
+It's a work in progress so feel free to contribute!
 
 It's based around the core technologies of FAC7's RHINO stack (React, Redis, Hapi and Node):
 
@@ -13,9 +16,9 @@ It's based around the core technologies of FAC7's RHINO stack (React, Redis, Hap
 
 ### What's in the boilerplate?
 
-Quite alot actually! The aim is to have a skeleton of a React single page app up and running with a Hapi server in the background that serves static files.
+The aim of the boilerplate is to have a skeleton of a React single page app up and running with a Hapi server in the background serving static files.
 
-The server can easily be extended to serve data as an API by communicating with the configured redis client
+The server can easily be extended to serve data as an API by communicating with the configured redis client.
 
 If you want to get straight up and running skip to the last section!
 
@@ -90,7 +93,7 @@ Bluebird is optional but highly recommended.
 
 Frontend code is split up between the `frontend` folder and the `public` folder (the public folder holds the index.html and img files (and is also the webpack app.js bundle target))
 
-Components live in the Components folder (which should be reorganised dependning on the project needs) and the current `App.js` holds the Header and Footer wrapper that appear on each page.
+Components live in the Components folder (which should be reorganised depending on the project needs) and the current `App.js` holds the Header and Footer wrapper that appear on each page.
 
 The `routes.js` folder is the highest level component which takes all of the components and orders them as routes
 
