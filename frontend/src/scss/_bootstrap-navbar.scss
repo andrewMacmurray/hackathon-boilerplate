@@ -48,9 +48,11 @@
   }
   .navbar-brand {
     height: $header-height;
+    width: $logo-size;
 
     img {
-      width: $logo-size;
+      margin-top: $logo-offset;
+      width: 100%;
     }
   }
 }
@@ -87,7 +89,11 @@
     color: #fff;
   }
 
-  img {
-    width: $logo-size / 1.5;
+  .navbar-brand {
+    width: $logo-size / 1.33;
+
+    img {
+      width: 100%;
+    }
   }
 }
