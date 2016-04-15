@@ -9,7 +9,7 @@
     "production-serve": "node backend/dist/index.js",
     "dev": "webpack-dev-server --hot --inline --content-base public/",
     "watch": "webpack --watch --progress",
-    "prestart": "npm run server-build",
+    "prestart": "npm run server-build && webpack --progress --config webpack.config.js",
     "start": "node ./backend/dist/index.js",
     "pretest": "npm run server-build",
     "test": "tape ./backend/tests/runner.js"
