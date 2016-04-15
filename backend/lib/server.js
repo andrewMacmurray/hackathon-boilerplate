@@ -1,11 +1,7 @@
-require('env2')('./config.env')
-
 import Hapi from 'hapi'
-const server = new Hapi.Server()
-const port = process.env.PORT || 4000
 
 // helper methods
-import { handlePlugins, handleStart } from './helpers/server-helpers.js'
+import { handlePlugins } from './helpers/server-helpers.js'
 
 // server plugins
 import Inert from 'inert'
@@ -16,13 +12,24 @@ import Images from './routes/Images.js'
 import ReactUrls from './routes/ReactUrls.js'
 import Scripts from './routes/Scripts.js'
 
-const ConnectionSettings = { port, routes: {cors: true} }
 const Plugins = [ Inert ]
 const Routes = [ Hello, Images, ReactUrls, Scripts ]
 
-server.connection(ConnectionSettings)
-server.register(Plugins, handlePlugins)
-server.route(Routes)
-server.start(handleStart)
+// Must export function that takes a two arguments: a config object, and the redis client
+// Function must return an UNSTARTED server object
+export default (client) => {
 
-export default server
+  const server = new Hapi.Server()
+
+  server.connection({
+    port: process.env.PORT || 4000,
+    routes: {
+      cors: true
+    }
+  })
+
+  server.register(Plugins, handlePlugins)
+  server.route(Routes)
+
+  return server
+}
