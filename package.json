@@ -4,11 +4,15 @@
   "description": "Some boilerplate to get us off to a quick start at hackathons",
   "main": "index.js",
   "scripts": {
-    "nodemon": "nodemon backend/lib/server.js --exec babel-node --presets es2015,stage-1",
+    "nodemon": "nodemon backend/lib/index.js --exec babel-node --presets es2015,stage-1",
     "server-build": "babel backend/lib -d backend/dist --presets es2015,stage-1",
-    "production-serve": "node backend/dist/server.js",
+    "production-serve": "node backend/dist/index.js",
     "dev": "webpack-dev-server --hot --inline --content-base public/",
-    "watch": "webpack --watch --progress"
+    "watch": "webpack --watch --progress",
+    "prestart": "npm run server-build && webpack --progress --config webpack.config.js",
+    "start": "node ./backend/dist/index.js",
+    "pretest": "npm run server-build",
+    "test": "tape ./backend/tests/runner.js"
   },
   "repository": {
     "type": "git",
@@ -37,7 +41,8 @@
     "style-loader": "^0.13.1",
     "tape": "^4.5.1",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "wrapping-tape": "0.0.3"
   },
   "dependencies": {
     "axios": "^0.9.1",

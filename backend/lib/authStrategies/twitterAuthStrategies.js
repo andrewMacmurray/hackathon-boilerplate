@@ -1,7 +1,6 @@
 require('env2')('config.env')
 const CONSUMER_KEY = process.env.CONSUMER_KEY
 const CONSUMER_SECRET = process.env.CONSUMER_SECRET
-console.log(CONSUMER_SECRET, CONSUMER_KEY)
 
 export const TwitterCookie = {
   password: 'password1ajskdhasjkdhasjkdhasjkhdjsakdhajksdhasjkdh',

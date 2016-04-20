@@ -37,9 +37,12 @@ export default class Header extends React.Component {
               })}
             </Nav>
           </Navbar.Collapse>
-          <p className='user-logged-in'>{this.props.auth ? 'Welcome ' + this.props.userDetails : ''}</p>
         </Navbar>
       </div>
     )
   }
+}
+
+Header.defaultProps = {
+  menuItems: [ 'about', 'contact' ]
 }

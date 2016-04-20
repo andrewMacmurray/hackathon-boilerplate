@@ -1,11 +1,9 @@
 require('env2')('./config.env')
 
 import Hapi from 'hapi'
-const server = new Hapi.Server()
-const port = process.env.PORT || 4000
 
 // helper methods
-import { handlePlugins, handleStart } from './helpers/server-helpers.js'
+import { handlePlugins } from './helpers/server-helpers.js'
 
 // server plugins
 import Inert from 'inert'
@@ -18,20 +16,29 @@ import Images from './routes/Images.js'
 import ReactUrls from './routes/ReactUrls.js'
 import Scripts from './routes/Scripts.js'
 import Login from './routes/Login.js'
-import UserDetails from './routes/UserDetails.js'
+import UserRequest from './routes/UserRequest.js'
 
 // auth strategies
 import { TwitterCookie, TwitterOauth } from './authStrategies/twitterAuthStrategies.js'
 
-const ConnectionSettings = { port }
 const Plugins = [ Inert, Bell, AuthCookie ]
-const Routes = [ Login, Images, ReactUrls, Scripts, Hello, UserDetails ]
+const Routes = [ Login, Images, ReactUrls, Scripts, Hello, UserRequest ]
 
-server.connection(ConnectionSettings)
-server.register(Plugins, handlePlugins)
-server.auth.strategy('twitter', 'bell', TwitterOauth)
-server.auth.strategy('session', 'cookie', TwitterCookie)
-server.route(Routes)
-server.start(handleStart)
+export default (client) => {
 
-export default server
+  const server = new Hapi.Server()
+
+  server.connection({
+    port: process.env.PORT || 4000,
+    routes: {
+      cors: true
+    }
+  })
+
+  server.register(Plugins, handlePlugins)
+  server.auth.strategy('twitter', 'bell', TwitterOauth)
+  server.auth.strategy('session', 'cookie', TwitterCookie)
+  server.route(Routes)
+
+  return server
+}
