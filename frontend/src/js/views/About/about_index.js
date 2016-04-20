@@ -28,7 +28,7 @@ export default class About extends React.Component {
             <div style={styles.img.outer}>
               <img style={styles.img.inner} src='img/rhino.png' />
             </div>
-            <p onClick={() => { this.authRequest() }}>Your app goes here...</p>
+            <p>Your app goes here...</p>
             {this.checkCookie() ? '' : <a href='/login-with-twitter'>login with twitter</a>}
           </Col>
         </Row>
