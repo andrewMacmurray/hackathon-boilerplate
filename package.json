@@ -28,7 +28,8 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "css-loader": "^0.23.1",
-    "node-sass": "^3.4.2",
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^5.0.1",
     "nodemon": "^1.9.1",
     "path": "^0.12.7",
     "react-hot-loader": "^1.3.0",
@@ -40,14 +41,21 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
+    "bell": "^7.3.0",
     "bluebird": "^3.3.4",
     "env2": "^2.0.7",
     "hapi": "^13.2.2",
+    "hapi-auth-cookie": "^6.1.1",
     "inert": "^3.2.0",
+    "jsonwebtoken": "^5.7.0",
+    "node-sass": "^3.4.2",
     "react": "^0.14.8",
     "react-bootstrap": "^0.28.4",
     "react-dom": "^0.14.8",
+    "react-redux": "^4.4.5",
     "react-router": "^2.0.1",
-    "redis": "^2.6.0-0"
+    "redis": "^2.6.0-0",
+    "redux": "^3.5.1",
+    "redux-promise": "^0.5.3"
   }
 }
