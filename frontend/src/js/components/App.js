@@ -19,15 +19,26 @@ export default class App extends React.Component {
     }
   }
 
+  checkState () {
+    const state = [0, 1, 2, 4, 1, 2]
+    const index = 2;
+    return [
+      ...state.slice(0, index),
+      state[index] + 1,
+      ...state.slice(index + 1)
+    ]
+  }
+
   componentWillMount () {
-    if (document.cookie.indexOf('reactCookie') > -1) {
-      axios.get('/user-details').then(response => {
-        this.setState({
-          userDetails: response.data,
-          auth: true
-        })
-      })
-    }
+    console.log(this.checkState())
+    // if (document.cookie.indexOf('reactCookie') > -1) {
+    //   axios.get('/user-details').then(response => {
+    //     this.setState({
+    //       userDetails: response.data,
+    //       auth: true
+    //     })
+    //   })
+    // }
   }
 
   render () {

@@ -23,7 +23,7 @@ import UserDetails from './routes/UserDetails.js'
 // auth strategies
 import { TwitterCookie, TwitterOauth } from './authStrategies/twitterAuthStrategies.js'
 
-const ConnectionSettings = { port, routes: {cors: true} }
+const ConnectionSettings = { port }
 const Plugins = [ Inert, Bell, AuthCookie ]
 const Routes = [ Login, Images, ReactUrls, Scripts, Hello, UserDetails ]
 
