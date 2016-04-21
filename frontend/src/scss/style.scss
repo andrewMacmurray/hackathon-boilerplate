@@ -10,3 +10,22 @@ body {
   font-family: $main-font;
   margin-bottom: $footer-height;
 }
+
+.about h3 {
+  text-align: center;
+  margin: 2em;
+}
+
+.home {
+  text-align: center;
+}
+
+.image-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 4em auto;
+
+  img {
+    width: 100%;
+  }
+}

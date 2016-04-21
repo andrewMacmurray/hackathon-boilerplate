@@ -12,7 +12,7 @@
     "prestart": "npm run server-build && webpack --progress --config webpack.config.js",
     "start": "node ./backend/dist/index.js",
     "pretest": "npm run server-build",
-    "test": "tape ./backend/tests/runner.js"
+    "test": "node ./backend/lib/tests/runner.js"
   },
   "repository": {
     "type": "git",

@@ -19,16 +19,15 @@ const tests = tape({
   }
 })
 
-tests('Check server running', (t) => {
-  server.inject({ method: 'GET', url: '/' }, (res) => {
-    const actual = res.statusCode
-    const expected = 200
-    t.equal(actual, expected, 'Assert successful response')
-  })
+tests('Check auth is working', (t) => {
+  server.inject({ method: 'GET', url: '/login-with-twitter' }, (res) => {
+    var actual = res.statusCode
+    var expected = 302
+    t.equal(expected, actual, 'Assert login with twitter route initiates a redirect')
 
-  server.inject({ method: 'GET', url: '/app.js' }, (res) => {
-    const actual = res.headers['content-type'].indexOf('javascript') > -1
-    t.ok(actual, 'Assert app.js loaded')
+    actual = res.headers.hasOwnProperty('set-cookie')
+    t.ok(actual, 'Assert cookie is being set')
+
   })
 
   t.end()
