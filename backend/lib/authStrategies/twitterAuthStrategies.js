@@ -2,14 +2,14 @@ require('env2')('config.env')
 const CONSUMER_KEY = process.env.CONSUMER_KEY
 const CONSUMER_SECRET = process.env.CONSUMER_SECRET
 
-export const TwitterCookie = {
+module.exports.TwitterCookie = {
   password: 'password1ajskdhasjkdhasjkdhasjkhdjsakdhajksdhasjkdh',
   cookie: 'twitterCookie',
   redirectTo: '/login-with-twitter',
   isSecure: false
 }
 
-export const TwitterOauth = {
+module.exports.TwitterOauth = {
   provider: 'twitter',
   password: 'password2akjsdsakjdhajksdhajksdhajskdhasjkdhsajkdhasjkdh',
   clientId: CONSUMER_KEY,

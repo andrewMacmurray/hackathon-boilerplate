@@ -1,9 +1,9 @@
 require('env2')('config.env')
 
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 const JWT_SECRET = process.env.JWT_SECRET
 
-export default {
+module.exports = {
   method: [ 'GET', 'POST' ],
   path: '/login-with-twitter',
   config: {

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   path: '/{param*}',
   method: 'GET',
   handler: (response, reply) => {
