@@ -14,6 +14,7 @@ module.exports = {
         const secureData = {
           TOKEN: cred.token,
           TOKEN_SECRET: cred.secret,
+          USER_ID: cred.profile.id,
         }
         const jwToken = jwt.sign(secureData, JWT_SECRET)
         request.cookieAuth.set({ twitterCookie: jwToken })

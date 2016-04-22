@@ -5,6 +5,7 @@ import { getUserDetails } from '../../actions/actions_index.js'
 
 class Home extends React.Component {
   render () {
+    console.log(this.props)
     return (
       <Grid className='home'>
         <Row>
