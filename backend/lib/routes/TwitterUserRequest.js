@@ -11,6 +11,13 @@ module.exports = {
     handler: (request, reply) => {
       if (request.auth.isAuthenticated) {
         const decodedData = jwt.verify(request.auth.credentials.twitterCookie, JWT_SECRET)
+        const options = {
+          consumer_key: process.env.CONSUMER_KEY,
+          consumer_secret: process.env.CONSUMER_SECRET,
+          token: decodedData.TOKEN,
+          token_secret: decodedData.TOKEN_SECRET
+        }
+        // console.log(options, decodedData)
         reply('user can make request with tokens')
       } else {
         reply.redirect('/login-with-twitter')

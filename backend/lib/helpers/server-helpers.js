@@ -1,4 +1,4 @@
-module.exports.handlePlugins = (err) => {
+module.exports = (err) => {
   if (err) {
     console.log('plugins error: ', err)
     throw err
