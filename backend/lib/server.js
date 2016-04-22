@@ -1,30 +1,30 @@
 require('env2')('./config.env')
 
-import Hapi from 'hapi'
+const Hapi = require('hapi')
 
 // helper methods
-import { handlePlugins } from './helpers/server-helpers.js'
+const { handlePlugins } = require('./helpers/server-helpers.js')
 
 // server plugins
-import Inert from 'inert'
-import Bell from 'bell'
-import AuthCookie from 'hapi-auth-cookie'
+const Inert = require('inert')
+const Bell = require('bell')
+const AuthCookie = require('hapi-auth-cookie')
 
 // server routes
-import Hello from './routes/Hello.js'
-import Images from './routes/Images.js'
-import ReactUrls from './routes/ReactUrls.js'
-import Scripts from './routes/Scripts.js'
-import Login from './routes/Login.js'
-import UserRequest from './routes/UserRequest.js'
+const Hello = require('./routes/Hello.js')
+const Images = require('./routes/Images.js')
+const ReactUrls = require('./routes/ReactUrls.js')
+const Scripts = require('./routes/Scripts.js')
+const Login = require('./routes/Login.js')
+const UserRequest = require('./routes/UserRequest.js')
 
 // auth strategies
-import { TwitterCookie, TwitterOauth } from './authStrategies/twitterAuthStrategies.js'
+const { TwitterCookie, TwitterOauth } = require('./authStrategies/twitterAuthStrategies.js')
 
 const Plugins = [ Inert, Bell, AuthCookie ]
 const Routes = [ Login, Images, ReactUrls, Scripts, Hello, UserRequest ]
 
-export default (client) => {
+module.exports = (client) => {
 
   const server = new Hapi.Server()
 

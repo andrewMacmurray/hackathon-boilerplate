@@ -1,9 +1,9 @@
 require('env2')('config.env')
 
 const JWT_SECRET = process.env.JWT_SECRET
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 
-export default {
+module.exports = {
   method: 'GET',
   path: '/user-request',
   config: {

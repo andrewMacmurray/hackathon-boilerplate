@@ -1,11 +1,9 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { getUserDetails } from '../../actions/actions_index.js'
 
-export default class Home extends React.Component {
-  checkCookie () {
-    return document.cookie.indexOf('reactCookie') > -1
-  }
-
+class Home extends React.Component {
   render () {
     return (
       <Grid className='home'>
@@ -15,10 +13,18 @@ export default class Home extends React.Component {
               <img src='img/rhino.png' />
             </div>
             <p>Your app goes here...</p>
-            {this.checkCookie() ? '' : <a href='/login-with-twitter'>login with twitter</a>}
+            <a href='/login-with-twitter'>login with twitter</a>
           </Col>
         </Row>
       </Grid>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    userDetails: state.userDetails
+  }
+}
+
+export default connect(mapStateToProps, { getUserDetails })(Home)
