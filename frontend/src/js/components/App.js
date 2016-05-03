@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import Header from './Header/header_index.js'
 import Footer from './Footer/footer_index.js'
 
@@ -11,6 +10,7 @@ const options = {
 
 export default class App extends React.Component {
   render () {
+    console.log(this.props.userDetails)
     return (
       <div>
         <Header

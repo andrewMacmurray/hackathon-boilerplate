@@ -4,8 +4,18 @@ import { connect } from 'react-redux'
 import { getUserDetails } from '../../actions/actions_index.js'
 
 class Home extends React.Component {
+  componentWillMount () {
+    if (this.checkCookie()) {
+      this.props.getUserDetails()
+    }
+  }
+
+  checkCookie () {
+    return document.cookie.indexOf('twitterUserCookie') > -1
+  }
+
   render () {
-    console.log(this.props)
+    console.log(this.props.userDetails)
     return (
       <Grid className='home'>
         <Row>
@@ -14,7 +24,7 @@ class Home extends React.Component {
               <img src='img/rhino.png' />
             </div>
             <p>Your app goes here...</p>
-            <a href='/login-with-twitter'>login with twitter</a>
+            {this.checkCookie() ? '' : <a href='/login-with-twitter'>login with twitter</a>}
           </Col>
         </Row>
       </Grid>
@@ -22,7 +32,7 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     userDetails: state.userDetails
   }

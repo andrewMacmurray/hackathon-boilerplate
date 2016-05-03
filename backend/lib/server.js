@@ -11,7 +11,6 @@ const Bell = require('bell')
 const AuthCookie = require('hapi-auth-cookie')
 
 // server routes
-const Hello = require('./routes/Hello.js')
 const Images = require('./routes/Images.js')
 const ReactUrls = require('./routes/ReactUrls.js')
 const Scripts = require('./routes/Scripts.js')
@@ -22,19 +21,13 @@ const UserRequest = require('./routes/TwitterUserRequest.js')
 const authStrategies = require('./authStrategies/twitterAuthStrategies.js')
 
 const Plugins = [ Inert, Bell, AuthCookie ]
-const Routes = [ Login, Images, ReactUrls, Scripts, Hello, UserRequest ]
+const Routes = [ Login, Images, ReactUrls, Scripts, UserRequest ]
 
 module.exports = (client) => {
 
   const server = new Hapi.Server()
 
-  server.connection({
-    port: process.env.PORT || 4000,
-    routes: {
-      cors: true
-    }
-  })
-
+  server.connection({ port: process.env.PORT || 4000 })
   server.register(Plugins, handlePlugins)
   server.auth.strategy('twitter', 'bell', authStrategies.TwitterOauth)
   server.auth.strategy('session', 'cookie', authStrategies.TwitterCookie)

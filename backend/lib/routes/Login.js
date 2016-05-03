@@ -18,6 +18,8 @@ module.exports = {
         }
         const jwToken = jwt.sign(secureData, JWT_SECRET)
         request.cookieAuth.set({ twitterCookie: jwToken })
+        reply.redirect('/').state('twitterUserCookie', 'user-logged-in')
+      } else {
         reply.redirect('/')
       }
     }
