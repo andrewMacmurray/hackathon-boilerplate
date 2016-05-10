@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import userDetails from './reducer_userDetails.js'
+import generic from './reducer_generic.js'
 
 const rootReducer = combineReducers({
-  userDetails
+  generic
 })
 
 export default rootReducer
