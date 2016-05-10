@@ -18,7 +18,11 @@ It's based around the core technologies of FAC7's RHINO stack (React, Redis, Hap
 
 The aim of the boilerplate is to have a skeleton of a React single page app up and running with a Hapi server in the background serving static files.
 
-The server can easily be extended to serve data as an API by communicating with the configured redis client.
+The server can easily be extended to serve data as an API by communicating with the configured redis server.
+
+The frontend also has a skeleton redux setup which can be extended
+
+There are two main branches, one with twitter auth set up (called twitter) and the master branch without twitter auth. If using twitter auth remember sign up for a twitter app and add the consumer key and consumer secret (as `CONSUMER_KEY` and `CONSUMER_SECRET`) to a config.env file
 
 If you want to get straight up and running skip to the last section!
 
@@ -26,21 +30,16 @@ If you want to get straight up and running skip to the last section!
 
 ## Build Tools
 
-### Babel
 
-<img src='https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png' width='200' height='170' />
+### Webpack & Babel
 
-All code on the frontend and backend is run through Babel so we can use the full range of ES6 features we've been exposed to with react on the backend too (including import, export and object destructuring)
-
-### Webpack
-
-<img src='http://huaichao.wang/logo/AHDcHLsFuiX8.png' width='180' height='200' />
+<img src='http://huaichao.wang/logo/AHDcHLsFuiX8.png' width='80' height='100' /> <img src='https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png' width='100' height='70' />
 
 Frontend code is run through Webpack which transpiles all the js and jsx through babel and bundles it into one neat file `app.js` which meets ES5 standards
 
 ### Sass
 
-<img src='http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png' width='180' height='130' />
+<img src='http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png' width='140' height='100' />
 
 Webpack also watches for `.scss` files and turns them into css that can be used in the bundle
 
@@ -54,9 +53,7 @@ The backend folder holds all the server and db files:
 
 The root server file is `server.js` and this imports routes (as just plain objects) from the routes folder. The aim was to keep the server file as clean and neat as possible.
 
-The server is configured to serve js files, images (from the `./public/img` folder) and handles requests from react-router urls (these would usually crash the server if a user were to put them in manually so the `ReactUrls.js` route takes the request and replies with `index.html` (react router is very clever and handles the page the user was on!))
-
-The Hello route is just an example of a data endpoint (this should be deleted)
+The server is configured to serve js files, images (from the `./public/img` folder) and handles requests from react-router urls (these would usually crash the server if a user were to put them in manually so the `ReactUrls.js` route takes the request and replies with `index.html` (react router is clever and handles the page the user was on!))
 
 ### Bluebird.js
 
