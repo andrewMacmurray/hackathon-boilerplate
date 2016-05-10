@@ -7,9 +7,7 @@
     "nodemon": "nodemon backend/lib/index.js",
     "dev": "webpack-dev-server --hot --inline --content-base public/",
     "watch": "webpack --watch --progress",
-    "prestart": "npm run server-build && webpack --progress --config webpack.config.js",
     "start": "node ./backend/lib/index.js",
-    "pretest": "npm run server-build",
     "test": "node ./backend/lib/tests/runner.js"
   },
   "repository": {
@@ -44,13 +42,10 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
-    "bell": "^7.3.0",
     "bluebird": "^3.3.4",
     "env2": "^2.0.7",
     "hapi": "^13.2.2",
-    "hapi-auth-cookie": "^6.1.1",
     "inert": "^3.2.0",
-    "jsonwebtoken": "^5.7.0",
     "node-sass": "^3.4.2",
     "react": "^0.14.8",
     "react-bootstrap": "^0.28.4",
@@ -59,7 +54,6 @@
     "react-router": "^2.0.1",
     "redis": "^2.6.0-0",
     "redux": "^3.5.1",
-    "redux-promise": "^0.5.3",
-    "request": "^2.72.0"
+    "redux-promise": "^0.5.3"
   }
 }

@@ -10,7 +10,6 @@ const options = {
 
 export default class App extends React.Component {
   render () {
-    console.log(this.props.userDetails)
     return (
       <div>
         <Header

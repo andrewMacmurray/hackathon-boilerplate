@@ -106,7 +106,6 @@
     "array-bracket-spacing": ["error", "always"],
     "block-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": "error",
     "comma-spacing": "error",
     "computed-property-spacing": "error",
     "consistent-this": ["error", "that"],

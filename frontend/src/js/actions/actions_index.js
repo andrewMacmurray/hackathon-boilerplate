@@ -1,10 +1,8 @@
-import axios from 'axios'
-export const GET_USER_DETAILS = 'GET_USER_DETAILS'
+export const GENERIC_ACTION = 'GENERIC_ACTION'
 
-export const getUserDetails = () => {
-  const data = axios.get('/user-request').then(response => response.data)
+export const genericAction = () => {
   return {
-    type: GET_USER_DETAILS,
-    payload: data
+    type: GENERIC_ACTION,
+    payload: 'some data to pass into your app'
   }
 }
