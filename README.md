@@ -18,7 +18,11 @@ It's based around the core technologies of FAC7's RHINO stack (React, Redis, Hap
 
 The aim of the boilerplate is to have a skeleton of a React single page app up and running with a Hapi server in the background serving static files.
 
-The server can easily be extended to serve data as an API by communicating with the configured redis client.
+The server can easily be extended to serve data as an API by communicating with the configured redis server.
+
+The frontend also has a skeleton redux setup which can be extended
+
+There are two main branches, one with twitter auth set up (called twitter) and the master branch without twitter auth. If using twitter auth remember sign up for a twitter app and add the consumer key and consumer secret (as `CONSUMER_KEY` and `CONSUMER_SECRET`) to a config.env file
 
 If you want to get straight up and running skip to the last section!
 
