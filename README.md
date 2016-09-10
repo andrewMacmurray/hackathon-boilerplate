@@ -33,7 +33,7 @@ If you want to get straight up and running skip to the last section!
 
 ### Webpack & Babel
 
-<img src='http://huaichao.wang/logo/AHDcHLsFuiX8.png' width='80' height='100' /> <img src='https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png' width='100' height='70' />
+<img src='https://avatars1.githubusercontent.com/u/2105791' height='100' /> <img src='https://cms-assets.tutsplus.com/uploads/users/48/posts/24512/preview_image/babel-1.png' width='100' height='70' />
 
 Frontend code is run through Webpack which transpiles all the js and jsx through babel and bundles it into one neat file `app.js` which meets ES5 standards
 
