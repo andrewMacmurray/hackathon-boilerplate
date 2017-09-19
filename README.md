@@ -78,7 +78,7 @@ could be rewritten using bluebird as:
 
 ```js
 getDummyData()
-  .then(data => { reply(data) })
+  .then(data => reply(data))
   .catch(error => { throw error })
 ```
 
